@@ -10,6 +10,12 @@ It is however intended to work as a drop-in replacement for `northstar-dedicated
 
 Instructions on RCON usage can be found in its pull request description: https://github.com/R2Northstar/NorthstarLauncher/pull/100
 
+## Usage
+
+1. Replace `ghcr.io/pg9182/northstar-dedicated:1-tf2.0.11.0` with `ghcr.io/geckoeidechse/northstar-dedicated-rcon:latest` in your compose file or Docker command
+2. Set a password for RCON that is ≥8 characters long setting it as the value of the `rcon_password` convar
+3. RCON always runs on the same port as your gameserver (usually `37015`) but as **TCP** instead of **UDP**, so you will also have to expose that port as tcp in your compose file or Docker command.
+
 ## Building
 
 Build image via
