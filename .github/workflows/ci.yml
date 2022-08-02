@@ -19,7 +19,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: create image from repository
         run: |
+          name="$(echo "ghcr.io/${{github.repository_owner}}/northstar-dedicated-rcon" | tr "[:upper:]" "[:lower:]")"
           cd src
-          docker build --no-cache -t ghcr.io/${{ github.actor }}/northstar-dedicated-rcon .
+          docker build --no-cache -t $name .
       - name: push image to GitHub Container Registry
-        run: docker push ghcr.io/${{ github.actor }}/northstar-dedicated-rcon:latest
+        run: |
+          name="$(echo "ghcr.io/${{github.repository_owner}}/northstar-dedicated-rcon" | tr "[:upper:]" "[:lower:]")"
+          docker push $name:latest
