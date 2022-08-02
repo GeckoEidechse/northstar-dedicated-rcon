@@ -1,5 +1,9 @@
 <h1 align="center">northstar-dedicated-rcon</h1>
 
+**RCON version of the Docker image for the [Northstar](https://northstar.tf) dedicated server.** <a href="https://github.com/GeckoEidechse/northstar-dedicated-rcon/actions/workflows/ci.yml"><img src="https://github.com/GeckoEidechse/northstar-dedicated-rcon/actions/workflows/ci.yml/badge.svg?branch=main&event=push" align="right"/></a>
+
+[`ghcr.io/geckoeidechse/northstar-dedicated-rcon:latest`](https://ghcr.io/GeckoEidechse/northstar-dedicated-rcon)
+
 A variation of [pg9182's Docker image](https://github.com/pg9182/northstar-dedicated/) for Northstar that uses the latest version of the [RCON pull request](https://github.com/R2Northstar/NorthstarLauncher/pull/100).
 
 This image is designed mainly for testing the RCON pull request, so using it in production is not recommended!
