@@ -7,9 +7,9 @@ if [[ $# -lt 2 ]]; then
 fi
 
 cd "$(dirname "$0")/.."
-seg_ever="$(cd src/entrypoint && . APKBUILD && echo "$pkgver")"
-seg_nsver="$(cd src/northstar && . APKBUILD && echo "$pkgver")"
-seg_tfver="$(cd src/northstar && . APKBUILD && echo "$pkgver_tf")"
+seg_ever="1" # Hardcoded for now
+seg_nsver="1" # Hardcoded for now
+seg_tfver="1" # Hardcoded for now
 seg_git="$(git rev-parse --short HEAD)"
 seg_yymmdd="$(date --utc +%Y%m%d)"
 seg_rfc3339="$(date --utc --rfc-3339=seconds)"
