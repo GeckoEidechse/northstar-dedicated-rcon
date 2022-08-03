@@ -22,12 +22,14 @@ Instructions on RCON usage can be found in its pull request description: https:/
 
 ## Building
 
-Build image via
+Building image locally is not necessary for running it, you can just pull it from ghcr. If you still want to you can build the image locally by going to the `src/` directory...
+
+```bash
+cd src
+```
+
+...and then run the Docker build command.
 
 ```bash
 docker build --no-cache -t northstar-dedicated-rcon:latest .
 ```
-
-## Replacing `pg9182/northstar-dedicated`
-
-As this image is based on pg9182's, it can be used as a drop-in replacement. However as `northstar-dedicated-rcon` does not provide a registry yet, make sure to remove `--pull always` from your run command.
