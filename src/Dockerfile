@@ -1,4 +1,4 @@
-FROM ghcr.io/pg9182/northstar-dedicated:1-tf2.0.11.0-ns1.9.2
+FROM ghcr.io/pg9182/northstar-dedicated:1-tf2.0.11.0-ns1.9.3
 
 # Go to tmp folder, download launcher files, extract them, copy, delete old folder
 RUN cd /tmp && \
