@@ -11,5 +11,11 @@ RUN cd /tmp && \
     cd .. && \
     rm -r rcon-pr-temp
 
+# Change mod version so that RCON enabled server is visible from outside as such
+RUN \
+    sudo sed -i -E 's/1\.9\.3/1\.9\.3-RCON/' /usr/lib/northstar/R2Northstar/mods/Northstar.Client/mod.json && \
+    sudo sed -i -E 's/1\.9\.3/1\.9\.3-RCON/' /usr/lib/northstar/R2Northstar/mods/Northstar.Custom/mod.json && \
+    sudo sed -i -E 's/1\.9\.3/1\.9\.3-RCON/' /usr/lib/northstar/R2Northstar/mods/Northstar.CustomServers/mod.json
+
 # Port needed for RCON
 EXPOSE 37015/tcp
