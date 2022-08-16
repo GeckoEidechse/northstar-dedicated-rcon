@@ -4,7 +4,7 @@ FROM ghcr.io/pg9182/northstar-dedicated:1-tf2.0.11.0-ns1.9.3
 RUN cd /tmp && \
     mkdir rcon-pr-temp && \
     cd rcon-pr-temp && \
-    wget https://nightly.link/R2Northstar/NorthstarLauncher/actions/artifacts/329411219.zip && \
+    wget https://nightly.link/R2Northstar/NorthstarLauncher/actions/runs/2870656032/NorthstarLauncher-efec6a0.zip && \
     unzip *.zip && \
     sudo mv NorthstarLauncher.exe /usr/lib/northstar/NorthstarLauncher.exe && \
     sudo mv Northstar.dll /usr/lib/northstar/Northstar.dll && \
